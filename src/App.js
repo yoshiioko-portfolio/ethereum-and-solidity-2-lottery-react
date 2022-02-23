@@ -5,7 +5,7 @@ import web3 from "./web3";
 import lottery from "./lottery";
 
 class App extends React.Component {
-  state = { manager: "", players: [], balance: "", value: "" };
+  state = { manager: "", players: [], balance: "", value: "", message: "" };
 
   async componentDidMount() {
     const manager = await lottery.methods.manager().call();
@@ -55,7 +55,6 @@ class App extends React.Component {
         </form>
 
         <hr />
-
         <h1>{this.state.message}</h1>
       </div>
     );
